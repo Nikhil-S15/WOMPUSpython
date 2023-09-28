@@ -61,25 +61,25 @@ def agent_move(dx, dy):
 while True:
     print_grid()
 
-    print("Enter your move (W, A, S, D to move, Q to quit):")
+    print("Enter your move (Use U, L, R, D to move UP,LEFT,RIGHT,DOWN, Q to quit):")
     move = input().strip().upper()
 
     if move == 'Q':
         print("You quit the game.")
         break
-    elif move == 'W':
+    elif move == 'U':
         if agent_move(-1, 0):
             print("You moved up.")
-    elif move == 'A':
+    elif move == 'L':
         if agent_move(0, -1):
             print("You moved left.")
-    elif move == 'S':
+    elif move == 'D':
         if agent_move(1, 0):
             print("You moved down.")
-    elif move == 'D':
+    elif move == 'R':
         if agent_move(0, 1):
             print("You moved right.")
     else:
-        print("Invalid input. Use W, A, S, D to move or Q to quit.")
+        print("Invalid input. Use U, L, R, D to move UP,LEFT,RIGHT,DOWN or Q to quit.")
 
 print_grid()  # Final grid display
